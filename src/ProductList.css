@@ -223,21 +223,6 @@ body {
         cursor: not-allowed;
   }
 
-    .shopping-cart {
-        position: relative; /* Position relative to allow absolute positioning of the count */
-        display: inline-block; /* Ensures the container wraps around the SVG */
-    }
-
-    .item-count {
-        position: absolute; /* Position the count absolutely */
-        top: -5px; /* Adjust vertical position */
-        right: -10px; /* Adjust horizontal position */
-        background-color: red; /* Background color for visibility */
-        color: white; /* Text color */
-        border-radius: 50%; /* Make it circular */
-        padding: 2px 5px; /* Padding for better appearance */
-        font-size: 12px; /* Font size */
-    }
 
   @media (max-width: 1200px) {
     .product-card {

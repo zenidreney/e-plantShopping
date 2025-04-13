@@ -22,7 +22,7 @@ function ProductList({ onHomeClick }) {
            ...prevState,
            [product.name]: true, // Set the product name as key and value as true to indicate it's added to cart
          }));
-        setIsButtonClicked(true);
+      /*  setIsButtonClicked(true);*/
       };
     
     const plantsArray = [
@@ -313,11 +313,11 @@ function ProductList({ onHomeClick }) {
                                         <div className="product-description">{plant.description}</div>
                                         <div className="product-cost">{plant.cost}</div>
                                         <button 
-                                        className={`product-button ${isButtonClicked ? 'added-to-cart' : ''}`} 
+                                        className={`product-button ${addedToCart[plant.name] ? 'added-to-cart' : ''}`}
                                         onClick={() => handleAddToCart(plant)}
-                                        disabled={isButtonClicked}
+                                        disabled={addedToCart[plant.name]}
                                     >
-                                        Add to Cart
+                                        {addedToCart[plant.name] ? 'Added to Cart' : 'Add to Cart'}
                                     </button>
                                     </div>
                                     ))}
